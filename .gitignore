@@ -3,3 +3,6 @@
 
 # Ignore compiled output files
 *.out
+
+#ignore gitignore
+*.gitignore

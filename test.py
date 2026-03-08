@@ -3,7 +3,7 @@ import os
 import time
 
 def create_binary_test() -> bytearray:
-    length = random.randint(10000000, 30000000)
+    length = random.randint(10000, 30000)
     rem = length % 8
     length = length - rem
     print(f"Target number of bits: {length}")

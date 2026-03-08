@@ -1,5 +1,4 @@
 import random
-import os
 
 def create_binary_test() -> bytearray:
     length = random.randint(10000, 30000)

@@ -6,3 +6,6 @@
 
 #ignore gitignore
 *.gitignore
+
+#ignore pycache
+__pycache__/

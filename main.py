@@ -8,7 +8,7 @@ def run_pipeline():
     # 1. Run the C Compressor
     print("[1/3] Executing C Compressor...")
     try:
-        subprocess.run(["./compressor.out"], check=True)
+        subprocess.run(["./rle_compressor.out"], check=True)
 
     except subprocess.CalledProcessError:
         print("❌ ERROR: Compressor crashed during execution.")
@@ -17,7 +17,7 @@ def run_pipeline():
     # 2. Run the C Decompressor
     print("\n[2/3] Executing C Decompressor...")
     try:
-        subprocess.run(["./decompressor.out"], check=True)
+        subprocess.run(["./rle_decompressor.out"], check=True)
     except subprocess.CalledProcessError:
         print("❌ ERROR: Decompressor crashed during execution.")
         sys.exit(1)

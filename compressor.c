@@ -2,9 +2,12 @@
 #include <stdlib.h>
 #include <time.h>
 
-int main() {
-    FILE *input_file = fopen("assets/test.bin", "rb");
-    FILE *output_file = fopen("assets/compressed.bin", "wb");
+int main(int argc, char *argv[]) {
+    const char *input_path = (argc >= 2) ? argv[1] : "assets/test.bin";
+    const char *output_path = (argc >= 3) ? argv[2] : "assets/compressed.bin";
+
+    FILE *input_file = fopen(input_path, "rb");
+    FILE *output_file = fopen(output_path, "wb");
     if (input_file == NULL || output_file == NULL) {
         perror("Error opening files");
         return EXIT_FAILURE;
